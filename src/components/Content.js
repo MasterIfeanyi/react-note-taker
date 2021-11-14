@@ -4,9 +4,7 @@ import Note from "./Note";
 
 const Content = () => {
   const [note, setNote] = useState("");
-  const [listNotes, setListNotes] = useState(
-    JSON.parse(localStorage.getItem("To-do")) || []
-  );
+  const [listNotes, setListNotes] = useState([] || JSON.parse(localStorage.getItem("To-do")));
   const [displayNote, setDisplayNote] = useState("");
 
   const addItem = (note) => {
